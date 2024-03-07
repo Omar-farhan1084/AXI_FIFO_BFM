@@ -15,7 +15,7 @@ class write_fifo_sequence extends base_sequence;
     `uvm_info(get_type_name(),"Inside body of write_fifo_sequence",UVM_DEFAULT)
     repeat(1)begin
       start_item(req);
-      assert(req.randomize() with {req.type_of_pkt==0;req.awlen==1;});
+      assert(req.randomize() with {req.type_of_pkt==0;req.awlen==0;});
       finish_item(req);
     end
   endtask
